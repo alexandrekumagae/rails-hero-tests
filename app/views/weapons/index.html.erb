@@ -1,0 +1,9 @@
+<% @weapons.each do |weapon| %>
+  <strong>Name:</strong> <%= weapon.name %><br>
+  <strong>Description:</strong> <%= weapon.description %><br>
+  <strong>Power Base:</strong> <%= weapon.power_base %><br>
+  <strong>Power Step:</strong> <%= weapon.power_step %><br>
+  <strong>Level:</strong> <%= weapon.level %>
+  <strong>Current Power:</strong> <%= weapon.current_power %>
+  <strong>Title:</strong> <%= weapon.title %>
+<% end %>
