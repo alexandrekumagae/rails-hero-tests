@@ -71,4 +71,37 @@ RSpec.describe "Enemies", type: :request do
       end
     end
   end
+
+  # describe "GET /enemies" do
+  #   context "when the enemy exists" do
+  #     let(:enemy) { create(:enemy) }
+  #     let(:enemy_attributes) { attributes_for(:enemy) }
+
+  #     it "return the enemies list" do
+  #       get "/enemies"
+
+  #       enemies_response = JSON.parse(response.body)
+
+  #       expect(enemies_response).not_to be_empty
+  #     end
+
+  #     it "returns the enemy based on ID" do
+  #       get "/enemies/#{enemy.id}"
+
+  #       expect(response).to have_http_status(200)
+  #     end
+  #   end
+  # end
+
+  # describe "POST /enemies" do
+  #   context "when it has valid parameters" do
+  #     it "creates the enemy with correct attributes" do 
+  #     end
+  #   end
+
+  #   context "when it has no valid parameters" do 
+  #     it "does not create enemy" do
+  #     end
+  #   end
+  # end
 end

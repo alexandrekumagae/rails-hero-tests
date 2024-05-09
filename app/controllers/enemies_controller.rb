@@ -12,7 +12,30 @@ class EnemiesController < ApplicationController
     head 204
   end
 
-  before_action :set_enemy
+  def index
+    @enemies = Enemy.all
+
+    render json: @enemies, status: :ok
+  end
+
+  def show
+    @enemy = Enemy.find(params[:id])
+
+    rescue ActiveRecord::RecordNotFound => e
+      render json: { message: e.message }, status: :not_found
+
+    render json: @enemy, status: :ok
+  end
+  
+  def create
+    if @enemy.create(enemy_params)
+      render json: @enemy, status: 204
+    else
+      render json: { errors: @enemy.errors }, status: :unprocessable_entity
+    end
+  end
+
+  before_action :set_enemy, except: [:index, :create]
 
   private
     

@@ -9,5 +9,5 @@ Rails.application.routes.draw do
 
   resources :weapons, only: [:index, :create, :destroy]
   
-  resources :enemies, only: [:update, :destroy]
+  resources :enemies, only: [:update, :destroy, :index, :show, :create]
 end
